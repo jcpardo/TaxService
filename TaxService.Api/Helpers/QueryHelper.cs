@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.Linq;
 using System.Reflection;
 using Microsoft.AspNetCore.WebUtilities;
-using TaxService.Interfaces;
+using TaxService.Api.Interfaces;
 
-namespace TaxService.Helpers
+namespace TaxService.Api.Helpers
 {
     public class QueryHelper : IQueryHelper
     {

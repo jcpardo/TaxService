@@ -2,9 +2,9 @@
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TaxService.Interfaces;
+using TaxService.Api.Interfaces;
 
-namespace TaxService.Installers
+namespace TaxService.Api.Installers
 {
     public static class Installer
     {

@@ -1,14 +1,14 @@
 ﻿using System.Threading.Tasks;
-using TaxService.Entities.TaxJar.RequestForOrder;
-using TaxService.Entities.TaxJar.ResponseForLocation;
-using TaxService.Entities.TaxJar.ResponseForOrder;
-using TaxService.Entities.TaxJar.ResquestForLocation;
+using TaxService.Api.Dtos.RequestForLocation;
+using TaxService.Api.Dtos.RequestForOrder;
+using TaxService.Api.Dtos.ResponseForLocation;
+using TaxService.Api.Dtos.ResponseForOrder;
 
-namespace TaxService.Interfaces
+namespace TaxService.Api.Interfaces
 {
     public interface ITaxService
     {
-        Task<TaxJarResponseForOrder> GetTaxForOrderAsync(TaxJarRequestForOrder orderDetails);
-        Task<TaxJarResponseForLocation> GetTaxForLocationAsync(TaxJarRequestForLocation locationDetails);
+        Task<TaxResponseForOrderDto> GetTaxForOrderAsync(TaxRequestForOrderDto orderDetails);
+        Task<TaxResponseForLocationDto> GetTaxForLocationAsync(TaxRequestForLocationDto locationDetails);
     }
 }

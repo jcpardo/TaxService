@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Net;
-using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using TaxService.Exceptions;
+using TaxService.Api.Exceptions;
 
-namespace TaxService.Security
+namespace TaxService.Api.Security
 {
     public class ErrorHandlerMiddleware
     {

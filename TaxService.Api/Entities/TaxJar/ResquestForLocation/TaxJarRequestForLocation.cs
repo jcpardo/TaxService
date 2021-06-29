@@ -1,9 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc;
 
-namespace TaxService.Entities.TaxJar.ResquestForLocation
+namespace TaxService.Api.Entities.TaxJar.ResquestForLocation
 {
-    [BindProperties]
     public class TaxJarRequestForLocation
     {
         public string city { get; set; }

@@ -1,6 +1,6 @@
-﻿using TaxService.Options;
+﻿using TaxService.Api.Options;
 
-namespace TaxService.Interfaces
+namespace TaxService.Api.Interfaces
 {
     public interface IHttpClientConfigurationHelper
     {

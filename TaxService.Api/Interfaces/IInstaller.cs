@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace TaxService.Interfaces
+namespace TaxService.Api.Interfaces
 {
     public interface IInstaller
     {

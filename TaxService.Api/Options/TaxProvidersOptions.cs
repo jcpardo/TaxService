@@ -1,4 +1,4 @@
-﻿namespace TaxService.Options
+﻿namespace TaxService.Api.Options
 {
     public class TaxProvidersOptions
     {

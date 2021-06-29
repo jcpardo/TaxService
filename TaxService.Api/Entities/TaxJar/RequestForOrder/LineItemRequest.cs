@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TaxService.Entities.TaxJar.RequestForOrder
+﻿namespace TaxService.Api.Entities.TaxJar.RequestForOrder
 {
     public class LineItemRequest
     {

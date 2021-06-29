@@ -1,4 +1,4 @@
-﻿namespace TaxService.Entities.TaxJar.ResponseForOrder
+﻿namespace TaxService.Api.Entities.TaxJar.ResponseForOrder
 {
     public class JurisdictionsResponse
     {

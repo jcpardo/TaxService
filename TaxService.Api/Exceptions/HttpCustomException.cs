@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace TaxService.Exceptions
+namespace TaxService.Api.Exceptions
 {
     public class HttpCustomException : Exception
     {

@@ -1,4 +1,4 @@
-﻿namespace TaxService.Entities.TaxJar.ResponseForLocation
+﻿namespace TaxService.Api.Entities.TaxJar.ResponseForLocation
 {
     public class RateResponse
     {

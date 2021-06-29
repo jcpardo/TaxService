@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
-using TaxService.Interfaces;
-using TaxService.Options;
+using TaxService.Api.Interfaces;
+using TaxService.Api.Options;
 
-namespace TaxService.Helpers
+namespace TaxService.Api.Helpers
 {
     public class HttpClientConfigurationHelper : IHttpClientConfigurationHelper
     {

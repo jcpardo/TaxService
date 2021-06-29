@@ -6,9 +6,9 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TaxService.Entities.TaxJar.RequestForOrder;
-using TaxService.Entities.TaxJar.ResponseForLocation;
-using TaxService.Entities.TaxJar.ResponseForOrder;
+using TaxService.Api.Entities.TaxJar.RequestForOrder;
+using TaxService.Api.Entities.TaxJar.ResponseForLocation;
+using TaxService.Api.Entities.TaxJar.ResponseForOrder;
 
 namespace TaxService.Tests.Controllers
 {

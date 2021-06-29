@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 
-namespace TaxService.Security
+namespace TaxService.Api.Security
 {
     public class ApiKeyMessageMiddleware
     {

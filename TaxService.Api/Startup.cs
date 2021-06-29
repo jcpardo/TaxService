@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TaxService.Extensions;
-using TaxService.Options;
-using TaxService.Installers;
+using TaxService.Api.Extensions;
+using TaxService.Api.Installers;
+using TaxService.Api.Options;
 
-namespace TaxService
+namespace TaxService.Api
 {
     public class Startup
     {
@@ -22,7 +22,6 @@ namespace TaxService
         public void ConfigureServices(IServiceCollection services)
         {
             services.InstallServicesInAssembly(Configuration);
-            ServicesInstaller.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Net.Http.Headers;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TaxService.HttpClients;
-using TaxService.Interfaces;
+using TaxService.Api.HttpClients;
+using TaxService.Api.Interfaces;
 
-namespace TaxService.Installers
+namespace TaxService.Api.Installers
 {
     public class HttpClientsInstaller : IInstaller
     {

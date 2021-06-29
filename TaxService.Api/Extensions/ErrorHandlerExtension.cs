@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using TaxService.Security;
+using TaxService.Api.Security;
 
-namespace TaxService.Extensions
+namespace TaxService.Api.Extensions
 {
     public static class ErrorHandlerExtension
     {

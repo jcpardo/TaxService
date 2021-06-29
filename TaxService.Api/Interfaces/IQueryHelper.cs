@@ -1,4 +1,4 @@
-﻿namespace TaxService.Interfaces
+﻿namespace TaxService.Api.Interfaces
 {
     public interface IQueryHelper
     {

@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using TaxService.Entities.TaxJar.RequestForOrder;
-using TaxService.Entities.TaxJar.ResponseForLocation;
-using TaxService.Entities.TaxJar.ResponseForOrder;
-using TaxService.Entities.TaxJar.ResquestForLocation;
+using TaxService.Api.Entities.TaxJar.RequestForOrder;
+using TaxService.Api.Entities.TaxJar.ResponseForLocation;
+using TaxService.Api.Entities.TaxJar.ResponseForOrder;
+using TaxService.Api.Entities.TaxJar.ResquestForLocation;
 
-namespace TaxService.Interfaces
+namespace TaxService.Api.Interfaces
 {
     public interface ITaxJarHttpClient
     {

@@ -3,15 +3,14 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
-using TaxService.Entities.TaxJar.RequestForOrder;
-using TaxService.Entities.TaxJar.ResponseForLocation;
-using TaxService.Entities.TaxJar.ResponseForOrder;
-using TaxService.Entities.TaxJar.ResquestForLocation;
-using TaxService.Exceptions;
-using TaxService.Interfaces;
+using TaxService.Api.Entities.TaxJar.RequestForOrder;
+using TaxService.Api.Entities.TaxJar.ResponseForLocation;
+using TaxService.Api.Entities.TaxJar.ResponseForOrder;
+using TaxService.Api.Entities.TaxJar.ResquestForLocation;
+using TaxService.Api.Exceptions;
+using TaxService.Api.Interfaces;
 
-namespace TaxService.HttpClients
+namespace TaxService.Api.HttpClients
 {
     public class TaxJarHttpClient : ITaxJarHttpClient
     {

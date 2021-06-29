@@ -1,16 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using TaxService.Entities.TaxJar.RequestForOrder;
-using TaxService.Entities.TaxJar.ResponseForLocation;
-using TaxService.Entities.TaxJar.ResponseForOrder;
-using TaxService.Entities.TaxJar.ResquestForLocation;
-using TaxService.Interfaces;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using TaxService.Api.Dtos.RequestForLocation;
+using TaxService.Api.Dtos.RequestForOrder;
+using TaxService.Api.Dtos.ResponseForLocation;
+using TaxService.Api.Dtos.ResponseForOrder;
+using TaxService.Api.Interfaces;
 
-
-namespace TaxService.Controllers
+namespace TaxService.Api.Controllers
 {
     [Route("api/taxes")]
+    [Produces("application/json")]
     [ApiController]
     public class TaxesController : ControllerBase
     {
@@ -21,10 +20,9 @@ namespace TaxService.Controllers
             _taxService = taxService;
         }
 
-       
         [HttpGet("location")]
-        [ProducesResponseType(typeof(TaxJarResponseForLocation), 200)]
-        public async Task<IActionResult> Get([FromQuery] TaxJarRequestForLocation parameters)
+        [ProducesResponseType(typeof(TaxResponseForLocationDto), 200)]
+        public async Task<IActionResult> Get([FromQuery] TaxRequestForLocationDto parameters)
         {
             var response = await _taxService.GetTaxForLocationAsync(parameters);
             if (response != null)
@@ -36,11 +34,11 @@ namespace TaxService.Controllers
         }
 
         // POST api/<TaxesController>
-        [ProducesResponseType(typeof(TaxJarResponseForOrder),200)]
+        [ProducesResponseType(typeof(TaxResponseForOrderDto),200)]
         [HttpPost("order")]
-        public async Task<IActionResult> Post([FromBody] TaxJarRequestForOrder parameters)
+        public async Task<IActionResult> Post([FromBody] TaxRequestForOrderDto parameters)
         {
-            var response = await _taxService.GetTaxForOrderAsync(parameters);// call a tax service //_taxJarHttpClient.Post(parameters);
+            var response = await _taxService.GetTaxForOrderAsync(parameters);
             if (response != null)
             {
                 return Ok(response);

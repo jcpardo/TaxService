@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using TaxService.Interfaces;
+using TaxService.Api.Interfaces;
 
-namespace TaxService.Installers
+namespace TaxService.Api.Installers
 {
     public class SwaggerInstaller : IInstaller
     {
@@ -50,10 +48,19 @@ namespace TaxService.Installers
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                //x.IncludeXmlComments(xmlPath);
-
-                //x.CustomSchemaIds(s => s.GetCustomAttributes<DisplayNameAttribute>().SingleOrDefault()?.DisplayName);
+                x.CustomSchemaIds(SchemaIdStrategy);
             });
+        }
+
+        private static string SchemaIdStrategy(Type currentClass)
+        {
+            var returnValue = currentClass.Name;
+            if (returnValue.EndsWith("Dto"))
+            {
+                returnValue = returnValue.Replace("Dto", "");
+            }
+
+            return returnValue;
         }
     }
 }
